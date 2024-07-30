@@ -1,0 +1,88 @@
+1)GE Interview
+Q1  =>console.log(name);
+    var name = "Sonam";
+
+   console.log(age);
+   let age = 34;
+Output:undefined
+       Cannot access age before initialisation
+
+Q2) var name = [];
+var age = [];
+console.log(name == age,name === age)
+Output : false false;
+
+Q3)var a = [];
+var b = a;
+b.push(1);
+console.log(a,b);
+Output:[1],[1]
+Q4)How to pass a copy of an array to another array?
+One way : var a = [];
+var b = [...a];
+b.push(1);
+console.log(a,b);
+
+Second Way:var a = [];
+var b = a.slice();
+b.push(1);
+console.log(a,b);
+ Third way:var a = [];
+var b = a.splice();
+b.push(1);
+console.log(a,b);
+
+Q4)let user = {
+  name:"Sonam",
+  userID:46463646,
+  age:23
+ }
+ Object.defineProperties(user, {
+  userID: {
+    value: 42,
+    writable: false,
+  },
+});
+
+user.userID = 7868;
+
+Q5)Prototype in JS
+Q6)implement this function
+arr.sqrt();
+function squareElements(arr) {
+  return arr.map(function(element) {
+    return element * element;
+  });
+}
+
+// Example usage:
+let numbers = [1, 2, 3, 4, 5];
+let squaredNumbers = squareElements(numbers);
+console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+Q6)function printWithFreq(s){
+  var d = new Map();
+
+  s.split("").forEach(ele =>{
+    if(d.has(ele)){
+      d.set(ele,d.get(ele)+1);
+    }
+    else{
+      d.set(ele,1);
+    }
+  });
+
+  s.split("").forEach(element =>{
+    if(d.has(element) && d.get(element)!=0){
+      console.log(element + d.get(element) + " ");
+      d.set(element,0);
+    }
+  });
+}
+Q7)What is tree shaking concept in Angular?
+Q8)What are Subjects and how it is different from Behavioral Subject?
+Q9)Difference between Template driven and reactive forms in Angular?
+
+
+
+
+        
